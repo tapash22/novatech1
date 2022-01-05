@@ -7,7 +7,8 @@
       <h3>Stay With Us</h3>
       <div class="message">
         <p>
-          We are constantly touching new heights of success through our market expertise.
+          We are constantly touching new heights of success through our market
+          expertise.
         </p>
       </div>
       <div class="product">
@@ -34,11 +35,7 @@
           <div class="col-md-2" v-for="partner in partners" :key="partner.id">
             <div class="card">
               <div class="card-body">
-                <img
-                  :src="
-                    '/sub/' + partner.pimage
-                  "
-                />
+                <img :src="'/sub/' + partner.pimage" />
               </div>
               <div class="card-footer">
                 <p class="name">{{ partner.pname }}</p>
@@ -179,7 +176,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:wght@100&family=Lobster&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:wght@100&family=Lobster&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap");
 
 .home {
   width: 100%;
@@ -195,9 +192,9 @@ export default {
   background: rgba(0, 0, 0, 0.404);
 }
 h3 {
-font-size: 1.8rem;
+  font-size: 1.8rem;
   font-weight: 900;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #000;
   text-align: center;
   padding-top: 20px;
@@ -210,12 +207,11 @@ font-size: 1.8rem;
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  
 }
 .message p {
   font-size: 1.4rem;
   font-weight: 900;
-font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-left: 5%;
   margin-right: 5%;
   padding: 30px;
@@ -280,7 +276,7 @@ font-family: 'Roboto', sans-serif;
 .product .row .col-md-4 .box .text h4 {
   font-size: 1.5rem;
   font-weight: 900;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   color: #000;
   text-align: center;
   text-transform: uppercase;
@@ -329,13 +325,13 @@ font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
   border-bottom: 10px solid #0b5369;
-  border-left: 2px solid  #0b5369;
+  border-left: 2px solid #0b5369;
   border-right: 2px solid #0b5369;
 }
 .partners .col-md-2 .card .card-footer .name {
   font-size: 1.5rem;
   font-weight: 900;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   letter-spacing: 1px;
   color: #fff;
   text-align: center;
@@ -373,7 +369,7 @@ font-family: 'Roboto', sans-serif;
   text-align: center;
   font-size: 1.4rem;
   font-weight: 900;
-font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .contact .row .col-md-12 p a {
   color: blue;
@@ -404,9 +400,227 @@ font-family: 'Roboto', sans-serif;
   font-weight: 500;
 }
 
-
 @media only screen and (max-width: 436px) {
-  
-}
+  .home {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin-top: 130px;
+  }
+  .home .slide {
+    width: 100%;
+    height: 300px;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.404);
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    font-family: "Oswald", sans-serif;
+    color: #000;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .message {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .message p {
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: "Roboto", sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 30px;
+    text-align: justify;
+    border-top: 5px solid #0b5369;
+    border-left: 2px solid #0b5369;
+    border-right: 2px solid #0b5369;
+    border-bottom: 10px solid #0b5369;
+  }
 
+  .product {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 10px;
+  }
+  .product .row {
+    widows: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .product .row .col-md-4 {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+  }
+  .product .row .col-md-4 a {
+    text-decoration: none;
+  }
+  .product .row .col-md-4 .box {
+    width: 300px;
+    height: 260px;
+    padding: 5px;
+    margin: 5px;
+    background: #fff;
+  }
+  .product .row .col-md-4 .box .img {
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .product .row .col-md-4 .box .img img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .product .row .col-md-4 .box .text {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    background: #fff;
+    border-bottom: 10px solid #0b5369;
+    border-left: 2px solid #0b5369;
+    border-right: 2px solid #0b5369;
+    border-top: 1px solid #0b5369;
+  }
+  .product .row .col-md-4 .box .text h4 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: "Oswald", sans-serif;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .partners {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+  .partners .row {
+    widows: 100%;
+    padding: 10px;
+    margin: 5px;
+  }
+  .partners .row .col-md-2 {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+  .partners .col-md-2 .card {
+    width: 100%;
+    height: 250px;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+  }
+  .partners .col-md-2 .card .card-body {
+    width: 100%;
+    height: 150px;
+    padding: 5px;
+    margin: 0;
+    background: #fff;
+    filter: brightness(100%);
+  }
+  .partners .col-md-2 .card .card-body img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .partners .col-md-2 .card .card-footer {
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 10px solid #0b5369;
+    border-left: 2px solid #0b5369;
+    border-right: 2px solid #0b5369;
+  }
+  .partners .col-md-2 .card .card-footer .name {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    text-transform: uppercase;
+    background: #0b5369;
+  }
+  .partners .col-md-2 .card .card-footer .link {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: blue;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .contact {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+  .contact .row {
+    padding: 10px;
+    margin: 5px;
+  }
+  .contact .row .col-md-12 {
+    padding: 0;
+    margin: 0;
+  }
+  .contact .row .col-md-12 p {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 900;
+    font-family: "Roboto", sans-serif;
+  }
+  .contact .row .col-md-12 p a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .modal {
+    display: block;
+    margin-top: 25%;
+    border: none;
+  }
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    border: none;
+  }
+  .modal .modal-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .modal .modal-body {
+    padding: 20px;
+    margin: 0;
+  }
+  .modal .modal-body form label {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+}
 </style>

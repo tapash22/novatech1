@@ -65,33 +65,17 @@ img {
   width: 100%;
   opacity: 0;
 }
-@media screen and (max-width: 759px) {
 
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    color: green;
-    font-weight: bold;
-    font-size: 2rem;
-    font-weight: 500;
-    transition: 0.7s ease;
-    border-radius: 0 4px 4px 0;
-    text-decoration: none;
-    user-select: none;
-  }
-  .next {
-    right: 10px;
-  }
-  .prev {
-    left: 10px;
-  }
-}
 
 @media only screen and (max-width: 436px) {
-  
+  img {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+}
 }
 
 </style>
