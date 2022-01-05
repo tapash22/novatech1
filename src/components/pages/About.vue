@@ -2,55 +2,54 @@
   <div class="about">
     <div class="container">
       <div class="row">
-        <h3>About Us</h3>
+        <!-- <h3>About Us</h3> -->
         <div class="col-md-12">
           <div class="image">
             <img src="../../assets/image/about1.jpg" />
           </div>
           <div class="story">
-            <h4>Our Story</h4>
+            <h4>About the Company</h4>
             <p class="wrap">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-              <br />
-              <br />
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use Lorem Ipsum as
-              their default model text, and a search for 'lorem ipsum' will
-              uncover many web sites still in their infancy. Various versions
-              have evolved over the years, sometimes by accident, sometimes on
-              purpose (injected humour and the like).
-              <br />
-              <br />
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia, looked up one of
-              the more obscure Latin words, consectetur, from a Lorem Ipsum
-              passage, and going through the cites of the word in classical
-              literature, discovered the undoubtable source. Lorem Ipsum comes
-              from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-              Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-              BC. This book is a treatise on the theory of ethics, very popular
-              during the Renaissance. The first line of Lorem Ipsum, "Lorem
-              ipsum dolor sit amet..", comes from a line in section 1.10.32. The
-              standard chunk of Lorem Ipsum used since the 1500s is reproduced
-              below for those interested. Sections 1.10.32 and 1.10.33 from "de
-              Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-              exact original form, accompanied by English versions from the 1914
-              translation by H. Rackham.
+              Novatech Bangladesh Ltd. is an agro based company engaged in
+              importing from different countries and marketed a wide range of
+              veterinary health products and animal health care products
+              throughout the Bangladesh. We have made a significant industrial
+              growth with our hard work. We are constantly touching new heights
+              of success through our market expertise.
+            </p>
+            <br />
+            <h4>Team Power</h4>
+            <p class="wrap">
+              The strength of the company lies in its qualified and experienced
+              team that always tries to searching excellent quality products.
+              Our main motive is to optimize client’s satisfaction level at
+              every cost. We have 52 dedicated stuffs and they are working with
+              dedicated and reputation of their respective place or areas.
+            </p>
+            <br />
+            <h4>Quality Assurance</h4>
+            <p class="wrap">
+              Quality is our prime concern, thus we lay special emphasis on the
+              quality of the products. To assure the quality, we have set up
+              experienced people related to field.
+            </p>
+            <br />
+            <h4>Background</h4>
+            <p class="wrap">
+              Veterinary pharmaceutical finished products such as feed premix,
+              medicament premix etc.
+            </p>
+            <br />
+            <h4>Our Vision</h4>
+            <p class="wrap">
+              Our products, service and people will be the most valued by animal
+              health customers throughout the Bangladesh
+            </p>
+            <br />
+            <h4>Our Mission</h4>
+            <p class="wrap">
+              We build focus on animal health to bring customers quality
+              products, services and commitment to their business.
             </p>
           </div>
         </div>
@@ -60,6 +59,7 @@
 </template>
 
 <script>
+
 export default {
   mounted() {
     window.scrollTo(0, 0);
@@ -68,15 +68,17 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:wght@100&family=Lobster&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap');
+
 .about {
   width: 100%;
   height: 100%;
   padding: 0;
-  margin-top: 130px;
+  margin-top: 120px;
 }
 .row {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -90,14 +92,16 @@ h3 {
   padding: 10px;
 }
 .col-md-12 {
-  width: 70%;
-  padding: 10px;
-  margin: 5px;
+  width: 100%;
+  padding: 5px;
+  margin: 0;
 }
 .col-md-12 .image {
   width: 100%;
   padding: 0;
   margin: 0;
+  border: 10px solid #0a7691;
+  border-radius: 10px;
 }
 .col-md-12 .image img {
   width: 100%;
@@ -111,17 +115,33 @@ h3 {
   margin: 5px;
 }
 .story h4 {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   text-transform: uppercase;
+  border-top: 15px solid #0a7691;
+  border-left: 2px solid #0a7691;
+  border-right: 2px solid #0a7691;
+  background: #0a7691b9;
+  color: #fff;
 }
 .story .wrap {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 900;
+font-family: 'Roboto', sans-serif;
   padding: 10px;
-  margin: 5px;
-  text-align: justify;
+  margin-top:-5px;
+  text-align: center;
+  border-bottom: 10px solid #0a7691;
+  border-left: 2px solid #0a7691;
+  border-right: 2px solid #0a7691;
+  background: #fff;
 }
+
+@media only screen and (max-width: 436px) {
+  
+}
+
 </style>

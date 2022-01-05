@@ -2,62 +2,86 @@
   <div class="product">
     <div class="container">
       <div class="row">
-        <h3>Aqua</h3>
-        <div class="col-md-3" v-for="product in products" :key="product.id">
-          <div class="card">
-            <div class="card-body">
-              <img :src="product.img" />
-            </div>
-            <div class="card-footer">
-              <p>{{ product.name }}</p>
-            </div>
-          </div>
+        <div class="image">
+        <img src="../../assets/image/upcomming.png"/>
+        <h2>Aqua</h2>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: "poultry",
-  data() {
-    return {
-      products: [
-        {
-          id: "1",
-          name: "Antibiotic",
-          img: require("../../assets/image/anti.png"),
-          url: "",
-        },
-        {
-          id: "2",
-          name: "Nutrational",
-          img: require("../../assets/image/nutri.jpg"),
-          url: "",
-        },
-        {
-          id: "3",
-          name: "Harbal",
-          img: require("../../assets/image/harbal.jpg"),
-          url: "",
-        },
-        {
-          id: "4",
-          name: "Others",
-          img: require("../../assets/image/oth.png"),
-          url: "",
-        },
-      ],
-    };
-  },
-
-    mounted() {
-    window.scrollTo(0, 0);
-  },
-};
-</script>
-
 <style scoped>
-@import "../../assets/css/product.css";
+.product {
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  background: rgba(102, 241, 8, 0.473);
+}
+.row {
+  width: 100%;
+  height: 390px;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.row .image{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.image h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -100px;
+}
+
+@media only screen and (max-width: 436px) {
+  .product {
+  width: 100%;
+  height: 300px;
+  padding: 0;
+  background: rgba(102, 241, 8, 0.473);
+}
+.row {
+  widows: 100%;
+  height: 300px;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.row .image{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.image h2{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -100px;
+}
+}
+
 </style>

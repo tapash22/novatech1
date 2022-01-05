@@ -2,7 +2,9 @@
   <div class="navigation">
     <nav>
       <div class="brand">
-        <img src="../assets/image/logo.png" />
+        <router-link to="/home">
+        <img src="../assets/image/logo2.png" />
+        </router-link>
       </div>
       <div class="navbar">
         <ul class="ul">
@@ -42,40 +44,40 @@
                   >Dairy<i class="fa fa-angle-right" aria-hidden="true"></i
                 ></router-link>
                 <!-- sub-category -->
-                <ul class="two">
+                <!-- <ul class="two">
                   <li>
-                    <router-link to="/antibiotic">Antibiotic</router-link>
+                    <router-link to="">Antibiotic</router-link>
                   </li>
                   <li>
-                    <router-link to="/nutritional">Nutritional</router-link>
+                    <router-link to="">Nutritional</router-link>
                   </li>
                   <li>
-                    <router-link to="/harbal">Harbal </router-link>
+                    <router-link to="">Harbal </router-link>
                   </li>
                   <li>
-                    <router-link to="/others">Others</router-link>
+                    <router-link to="">Others</router-link>
                   </li>
-                </ul>
+                </ul> -->
               </li>
               <li>
                 <router-link to="/aqua"
                   >Aqua<i class="fa fa-angle-right" aria-hidden="true"></i
                 ></router-link>
                 <!-- sub-category -->
-                <ul class="two">
+                <!-- <ul class="two">
                   <li>
-                    <router-link to="/antibiotic">Antibiotic</router-link>
+                    <router-link to="">Antibiotic</router-link>
                   </li>
                   <li>
-                    <router-link to="/nutritional">Nutritional</router-link>
+                    <router-link to="">Nutritional</router-link>
                   </li>
                   <li>
-                    <router-link to="/harbal">Harbal </router-link>
+                    <router-link to="">Harbal </router-link>
                   </li>
                   <li>
-                    <router-link to="/others">Others</router-link>
+                    <router-link to="">Others</router-link>
                   </li>
-                </ul>
+                </ul> -->
               </li>
             </ul>
           </li>
@@ -93,14 +95,14 @@
   height: 130px;
   padding: 0;
   margin: 0;
-  background: #0a7691;
+  background:#7dced1;
   position: fixed;
   z-index: 1;
 }
 nav {
   width: 100%;
   height: 100%;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   position: relative;
   display: flex;
@@ -108,15 +110,21 @@ nav {
 }
 nav .brand {
   width: 30%;
-  height: 70px;
-  padding: 10px;
+  height: 130px;
+  padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
 }
+.brand a{
+  text-decoration: none;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
 .brand img {
-  width: 200px;
-  height: 100px;
+  width: 170px;
+  height: 120px;
   padding: 0;
   margin: 0;
 }
@@ -144,17 +152,18 @@ nav .navbar {
   display: block;
 }
 .navbar .ul li a {
-  font-size: 1.3rem;
-  font-weight: 500px;
+   font-size: 1.2rem;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   margin: 0;
   padding: 5px;
   border-bottom: 2px none #fff;
 }
 .navbar .ul li a:hover,
 .navbar .ul li a.router-link-exact-active {
-  /* .navbar .ul li a.router-link-exact-active{ */
   border-bottom: 2px solid #fff;
 }
 .navbar .ul li ul {
@@ -162,7 +171,7 @@ nav .navbar {
   display: none;
   padding: 0;
   margin: 0;
-  background: #0b5369;
+  background: #0b53699d;
   margin-top: 5px;
   z-index: 1;
 }
@@ -202,8 +211,8 @@ nav .navbar {
   position: absolute;
   display: none;
   padding: 0;
-  margin-left: 115px;
-  background: #0b5369;
+  margin-left: 100px;
+  background: #0b53699d;
   margin-top: -30px;
 }
 .navbar .ul li ul li .two li {

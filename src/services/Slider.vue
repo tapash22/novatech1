@@ -1,98 +1,52 @@
 <template>
-  <div class="sld">
-    <div class="sd" v-for="i in [currentIndex]" :key="i">
-      <img :src="currentImg" />
-    </div>
+<carousel :autoplay="4000" :nav="true" :wrap-around="true">
+    <slide v-for="slider in sliders" :key="slider.id">
+      <img :src="'/sub/'+slider.simage" />
+    </slide>
 
-    <a class="prev" @click="prev" href="#">&#10094; </a>
-    <a class="next" @click="next" href="#">&#10095; </a>
-  </div>
+    <template #addons>
+      <pagination />
+    </template>
+  </carousel>
 </template>
+
+
 <script>
+import "vue3-carousel/dist/carousel.css";
+import { Carousel, Slide, Pagination } from "vue3-carousel";
+import Slider from "../apis/Slider";
+
 export default {
   name: "Slider",
   data() {
     return {
-      images: [
-        "https://i.postimg.cc/sXwpMmD2/1.jpg",
-        "https://i.postimg.cc/MKh1fvx1/3.jpg",
-        "https://i.postimg.cc/L5JZnMby/2.jpg",
-        "https://i.postimg.cc/RVnHm4fh/4.jpg",
-        "https://i.postimg.cc/8zmB8TQW/5.jpg",
-      ],
-      timer: null,
-      currentIndex: 0,
+      sliders: [],
     };
   },
+  components: {
+         Carousel,
+    Slide,
 
-  mounted() {
-    this.startSlide();
+    Pagination,
   },
 
-  methods: {
-    startSlide() {
-      this.timer = setInterval(this.next, 3000);
-    },
-
-    next() {
-      this.currentIndex += 1;
-    },
-    prev() {
-      this.currentIndex -= 1;
-    },
-  },
-
-  computed: {
-    currentImg() {
-      return this.images[Math.abs(this.currentIndex) % this.images.length];
-    },
+  created() {
+    Slider.getSlider().then((response) => {
+      this.sliders = response.data;
+      console.log(this.sliders);
+    });
   },
 };
 </script>
 
 <style scoped>
-.sld {
-  widows: 100%;
-  height: 100%;
-  position: relative;
-  justify-content: center;
-  margin-top: 120px;
-}
-
-.sd {
+img {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
   padding: 0;
   margin: 0;
-  width: 100%;
-  height: 100%;
-}
-img {
-  height: 700px;
-  width: 100%;
-  opacity: 1;
-  filter: brightness(90%);
-}
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  color: green;
-  font-weight: bold;
-  font-size: 2.5rem;
-  font-weight: 500;
-  transition: 0.7s ease;
-  border-radius: 0 4px 4px 0;
-  text-decoration: none;
-  user-select: none;
-}
-
-.next {
-  right: 20px;
-}
-
-.prev {
-  left: 20px;
 }
 
 .fade-enter-active,
@@ -112,23 +66,6 @@ img {
   opacity: 0;
 }
 @media screen and (max-width: 759px) {
-  .sld {
-    width: 100%;
-    height: 100%;
-  }
-
-  .sd {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-  img {
-    height: 300px;
-    width: 100%;
-    opacity: 1;
-    filter: brightness(90%);
-  }
 
   .prev,
   .next {
@@ -152,4 +89,9 @@ img {
     left: 10px;
   }
 }
+
+@media only screen and (max-width: 436px) {
+  
+}
+
 </style>

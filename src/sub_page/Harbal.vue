@@ -10,6 +10,9 @@
             </div>
             <div class="card-footer">
               <p>{{ product.name }}</p>
+              <router-link to=""
+                >Show Details</router-link
+              >
             </div>
           </div>
         </div>
@@ -27,31 +30,25 @@ export default {
         {
           id: "1",
           name: "Jinan",
-          img: require("../assets/image/jinan.png"),
+          img: require("../assets/image/harbal.jpg"),
           url: "",
         },
         {
           id: "2",
           name: "Jinwoo",
-          img: require("../assets/image/jinwoo.png"),
+          img: require("../assets/image/harbal.jpg"),
           url: "",
         },
         {
           id: "3",
           name: "Jizhong",
-          img: require("../assets/image/jizhong.png"),
+          img: require("../assets/image/harbal.jpg"),
           url: "",
         },
         {
           id: "4",
           name: "junyu",
-          img: require("../assets/image/junyu.png"),
-          url: "",
-        },
-        {
-          id: "5",
-          name: "Ewha",
-          img: require("../assets/image/ewha.png"),
+          img: require("../assets/image/harbal.jpg"),
           url: "",
         },
       ],

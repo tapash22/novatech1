@@ -4,13 +4,10 @@
       <Slider />
     </div>
     <div class="container">
+      <h3>Stay With Us</h3>
       <div class="message">
-        <h3>Stay With Us</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi autem
-          cum commodi iure, labore quisquam voluptatum alias voluptas
-          repudiandae eveniet accusantium sit quibusdam at pariatur aperiam!
-          Mollitia!
+          We are constantly touching new heights of success through our market expertise.
         </p>
       </div>
       <div class="product">
@@ -30,24 +27,30 @@
           </div>
         </div>
       </div>
+
       <div class="partners">
         <h3>Partners</h3>
         <div class="row">
-          <div class="col-md-3" v-for="partner in partners" :key="partner.id">
+          <div class="col-md-2" v-for="partner in partners" :key="partner.id">
             <div class="card">
               <div class="card-body">
-                <img :src="partner.image" />
+                <img
+                  :src="
+                    '/sub/' + partner.pimage
+                  "
+                />
               </div>
               <div class="card-footer">
-                <p class="name">{{ partner.name }}</p>
+                <p class="name">{{ partner.pname }}</p>
                 <p class="link">
-                  <a :href="partner.website_link">Website Link</a>
+                  <a :href="partner.plink">Website Link</a>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="contact">
         <h3>Contact Us</h3>
         <div class="row">
@@ -116,10 +119,13 @@
 
 <script>
 import Slider from "../../services/Slider.vue";
+import Partner from "../../apis/Partner";
+
 export default {
   data() {
     return {
       showModal: false,
+      partners: [],
       products: [
         {
           id: "1",
@@ -140,48 +146,23 @@ export default {
           url: "/aqua",
         },
       ],
-
-      partners: [
-        {
-          id: "1",
-          name: "jinan",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-          website_link: "www.hetjunyu.com",
-          image: require("../../assets/image/jinan.png"),
-        },
-        {
-          id: "2",
-          name: "jinwoo",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-          website_link: "www.jonwoovet.com",
-          image: require("../../assets/image/jinwoo.png"),
-        },
-        {
-          id: "3",
-          name: "Ewhap",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-          website_link: "www.ewhap.com",
-          image: require("../../assets/image/ewha.png"),
-        },
-        {
-          id: "4",
-          name: "junyu",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
-          website_link: "www.hetjunyu.com",
-          image: require("../../assets/image/junyu.png"),
-        },
-      ],
     };
   },
   components: {
     Slider,
   },
 
+  created() {
+    this.getPartners();
+  },
+
   methods: {
+    getPartners() {
+      Partner.getPartner().then((response) => {
+        this.partners = response.data;
+        console.log(this.partners);
+      });
+    },
     onclick() {
       this.showModal = true;
     },
@@ -198,6 +179,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:wght@100&family=Lobster&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap');
+
 .home {
   width: 100%;
   height: 100%;
@@ -206,31 +189,41 @@ export default {
 }
 .home .slide {
   width: 100%;
-  height: 700px;
+  height: 500px;
   padding: 0;
   margin: 0;
   background: rgba(0, 0, 0, 0.404);
 }
 h3 {
-  font-size: 2rem;
-  font-weight: 700;
+font-size: 1.8rem;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
   color: #000;
   text-align: center;
   padding-top: 20px;
+  margin-top: 10px;
   text-transform: uppercase;
 }
 .message {
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  
 }
 .message p {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #000;
-  margin-left: 20%;
-  margin-right: 20%;
+  font-size: 1.4rem;
+  font-weight: 900;
+font-family: 'Roboto', sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 30px;
   text-align: justify;
+  border-top: 5px solid #0b5369;
+  border-left: 2px solid #0b5369;
+  border-right: 2px solid #0b5369;
+  border-bottom: 10px solid #0b5369;
 }
 
 .product {
@@ -238,16 +231,6 @@ h3 {
   height: 100%;
   padding: 0;
   margin: 10px;
-}
-.product h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #000;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 10px;
-  margin: 0;
 }
 .product .row {
   width: 100%;
@@ -268,9 +251,7 @@ h3 {
   height: 260px;
   padding: 5px;
   margin: 5px;
-
-  background: #0b5369;
-  border: 1px solid #000;
+  background: #fff;
 }
 .product .row .col-md-4 .box .img {
   width: 100%;
@@ -290,13 +271,17 @@ h3 {
   width: 100%;
   padding: 10px;
   margin: 0;
-  background: #0b5369;
-  border-radius: 5%;
+  background: #fff;
+  border-bottom: 10px solid #0b5369;
+  border-left: 2px solid #0b5369;
+  border-right: 2px solid #0b5369;
+  border-top: 1px solid #0b5369;
 }
 .product .row .col-md-4 .box .text h4 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
+  color: #000;
   text-align: center;
   text-transform: uppercase;
 }
@@ -307,52 +292,51 @@ h3 {
   padding: 10px;
   margin: 0;
 }
-.partners h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #000;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 10px;
-}
+
 .partners .row {
   padding: 10px;
   margin: 5px;
 }
-.partners .row .col-md-3 {
-  width: 25%;
+.partners .row .col-md-2 {
+  width: 20%;
   padding: 10px;
   margin: 0;
 }
-.partners .col-md-3 .card {
+.partners .col-md-2 .card {
   width: 100%;
-  height: 300px;
+  height: 250px;
   padding: 0;
   margin: 0;
   z-index: 0;
 }
-.partners .col-md-3 .card .card-body {
+.partners .col-md-2 .card .card-body {
   width: 100%;
-  height: 220px;
+  height: 150px;
   padding: 5px;
   margin: 0;
+  background: #fff;
+  filter: brightness(100%);
 }
-.partners .col-md-3 .card .card-body img {
+.partners .col-md-2 .card .card-body img {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
 }
-.partners .col-md-3 .card .card-footer {
+.partners .col-md-2 .card .card-footer {
   width: 100%;
-  height: 80px;
+  height: 100px;
   padding: 0;
   margin: 0;
+  border-bottom: 10px solid #0b5369;
+  border-left: 2px solid  #0b5369;
+  border-right: 2px solid #0b5369;
 }
-.partners .col-md-3 .card .card-footer .name {
-  font-size: 1.2rem;
-  font-weight: 500;
+.partners .col-md-2 .card .card-footer .name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -360,13 +344,13 @@ h3 {
   text-transform: uppercase;
   background: #0b5369;
 }
-.partners .col-md-3 .card .card-footer .link {
+.partners .col-md-2 .card .card-footer .link {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
   color: blue;
   text-decoration: none;
-  padding: 0;
+  padding: 5px;
   margin: 0;
   text-align: center;
 }
@@ -387,8 +371,9 @@ h3 {
 }
 .contact .row .col-md-12 p {
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.4rem;
+  font-weight: 900;
+font-family: 'Roboto', sans-serif;
 }
 .contact .row .col-md-12 p a {
   color: blue;
@@ -418,4 +403,10 @@ h3 {
   font-size: 1.2rem;
   font-weight: 500;
 }
+
+
+@media only screen and (max-width: 436px) {
+  
+}
+
 </style>
