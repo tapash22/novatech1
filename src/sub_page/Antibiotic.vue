@@ -6,11 +6,12 @@
         <div class="col-md-3" v-for="product in products" :key="product.id">
           <div class="card">
             <div class="card-body">
-              <img :src="'/sub/'+product.pimage" />
+              <img :src="'/sub/storage/app/' + product.pimage" />
             </div>
             <div class="card-footer">
               <p>{{ product.pdname }}</p>
-              <router-link :to="{ name: 'ProductDetail', params: { id: product.id } }"
+              <router-link
+                :to="{ name: 'ProductDetail', params: { id: product.id } }"
                 >Show Details</router-link
               >
             </div>

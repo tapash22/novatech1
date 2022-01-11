@@ -94,7 +94,11 @@ h3 {
     padding: 10px;
     margin: 0;
   }
-  .col-md-3 .card {
+  .col-md-3 a{
+    text-decoration: none;
+    color: #000;
+  }
+  .col-md-3 a .card {
     width: 100%;
     height: 280px;
     padding: 0;

@@ -7,7 +7,7 @@
           <router-link :to="product.url">
           <div class="box">
             <div class="img">
-              <img :src=" '/sub/'+product.img" />
+              <img :src=" '/sub/storage/app/'+product.img" />
             </div>
             <div class="text">
               <h4>{{ product.name }}</h4>

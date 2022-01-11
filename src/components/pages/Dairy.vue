@@ -2,85 +2,53 @@
   <div class="product">
     <div class="container">
       <div class="row">
-        <div class="image">
-        <img src="../../assets/image/upcomming.png"/>
-        <h2>Dairy</h2>
+        <h3>Dairy</h3>
+        <div class="col-md-3" v-for="product in products" :key="product.id">
+          <router-link :to="product.url">
+          <div class="card">
+            <div class="card-body">
+              <img :src="product.img" />
+            </div>
+            <div class="card-footer">
+              <p>{{ product.name }}</p>
+              <router-link :to="product.url">Show details</router-link>
+            </div>
+          </div>
+          </router-link>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-.product {
-  width: 100%;
-  height: 400px;
-  padding: 0;
-  background: rgba(102, 241, 8, 0.473);
-}
-.row {
-  width: 100%;
-  height: 390px;
-  padding: 10px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-.row .image{
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-.image img{
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-.image h2{
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #000;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: -100px;
-}
+<script>
+export default {
+  name: "poultry",
+  data() {
+    return {
+      products: [
+        {
+          id: "1",
+          name: "Antibiotics",
+          img: require("../../assets/image/anti.png"),
+          url: "/antibiotics",
+        },
+        {
+          id: "2",
+          name: "Penathaone",
+          img: require("../../assets/image/nutri.jpg"),
+          url: "/penathaone",
+        },  
+      ],
+    };
+  },
 
-@media only screen and (max-width: 436px) {
-  .product {
-  width: 100%;
-  height: 300px;
-  padding: 0;
-  background: rgba(102, 241, 8, 0.473);
-}
-.row {
-  widows: 100%;
-  height: 300px;
-  padding: 10px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-.row .image{
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-.image img{
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-.image h2{
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #000;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: -100px;
-}
-}
+    mounted() {
+    window.scrollTo(0, 0);
+  },
+};
+</script>
+
+<style scoped>
+@import "../../assets/css/product.css";
 </style>

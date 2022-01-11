@@ -7,7 +7,7 @@
             <div class="image">
               <img
                 :src="
-                  'novatechbdltd.com/sub/' + products.pimage
+                  '/sub/storage/app/' + products.pimage
                 "
               />
               <h3>{{ products.pdname }}</h3>

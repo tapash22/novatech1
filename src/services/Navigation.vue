@@ -75,9 +75,17 @@
         <div class="navbar">
           <ul class="ul">
             <transition-group name="slide-fade">
-              <li v-if="!show"><router-link to="/home" @click="onClick()">Home</router-link></li>
-              <li v-if="!show"><router-link to="/about" @click="onClick()">About</router-link></li>
-              <li v-if="!show"><router-link to="/gallery" @click="onClick()">Gallery</router-link></li>
+              <li v-if="!show">
+                <router-link to="/home" @click="onClick()">Home</router-link>
+              </li>
+              <li v-if="!show">
+                <router-link to="/about" @click="onClick()">About</router-link>
+              </li>
+              <li v-if="!show">
+                <router-link to="/gallery" @click="onClick()"
+                  >Gallery</router-link
+                >
+              </li>
               <li v-if="!show">
                 <router-link to="/products"
                   >Products<i
@@ -87,7 +95,7 @@
                   ></i
                 ></router-link>
                 <ul>
-                  <li >
+                  <li>
                     <router-link to="/poultry"
                       >Poultry<i
                         class="fa fa-angle-right"
@@ -95,24 +103,54 @@
                       ></i
                     ></router-link>
                     <ul class="two">
-                      <li >
-                        <router-link to="/antibiotic" @click="onClick()">Antibiotic</router-link>
-                      </li>
-                      <li >
-                        <router-link to="/nutritional" @click="onClick()">Nutritional</router-link>
+                      <li>
+                        <router-link to="/antibiotic" @click="onClick()"
+                          >Antibiotic</router-link
+                        >
                       </li>
                       <li>
-                        <router-link to="/harbal" @click="onClick()">Harbal </router-link>
+                        <router-link to="/nutritional" @click="onClick()"
+                          >Nutritional</router-link
+                        >
                       </li>
                       <li>
-                        <router-link to="/others" @click="onClick()">Others</router-link>
+                        <router-link to="/harbal" @click="onClick()"
+                          >Harbal
+                        </router-link>
+                      </li>
+                      <li>
+                        <router-link to="/probiotics" @click="onClick()"
+                          >Probiotics & Prebiotics
+                        </router-link>
+                      </li>
+                      <li>
+                        <router-link to="/anticoccidial" @click="onClick()"
+                          >Anticoccidial
+                        </router-link>
+                      </li>
+                      <li>
+                        <router-link to="/others" @click="onClick()"
+                          >Others</router-link
+                        >
                       </li>
                     </ul>
                   </li>
                   <li>
                     <router-link to="/dairy" @click="onClick()"
-                      >Dairy<i class="fa fa-angle-right" aria-hidden="true"></i
-                    ></router-link>
+                      >Dairy<i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </router-link>
+                    <ul class="two">
+                      <li>
+                        <router-link to="/antibiotics" @click="onClick()"
+                          >Antibiotics</router-link
+                        >
+                      </li>
+                      <li>
+                        <router-link to="/penathaone" @click="onClick()"
+                          >Penathaone</router-link
+                        >
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <router-link to="/aqua" @click="onClick()"
@@ -121,8 +159,14 @@
                   </li>
                 </ul>
               </li>
-              <li v-if="!show"><router-link to="contactus" @click="onClick()">Contact us</router-link></li>
-              <li v-if="!show"><router-link to="/login" @click="onClick()">Login</router-link></li>
+              <li v-if="!show">
+                <router-link to="contactus" @click="onClick()"
+                  >Contact us</router-link
+                >
+              </li>
+              <li v-if="!show">
+                <router-link to="/login" @click="onClick()">Login</router-link>
+              </li>
             </transition-group>
           </ul>
         </div>
@@ -156,6 +200,8 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lato:wght@100&family=Lobster&family=Luxurious+Roman&family=Oswald:wght@400;500&family=Poppins:wght@100;500&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&display=swap");
+
 .navigation {
   width: 100%;
   height: 130px;
@@ -179,7 +225,7 @@ export default {
   margin: 0;
   position: relative;
   display: flex;
-  box-shadow: 2px 2px 3px #fff;
+  box-shadow: 2px 2px 5px #fff;
 }
 .navi nav .brand {
   width: 30%;
@@ -230,7 +276,7 @@ nav .navbar {
 .navbar .ul li a {
   font-size: 1.2rem;
   font-weight: 900;
-  font-family: "Oswald", sans-serif;
+  font-family: "Luxurious Roman", cursive;
   letter-spacing: 1px;
   text-decoration: none;
   color: #000;
@@ -282,12 +328,12 @@ nav .navbar {
 .navbar .ul li ul li:hover .two {
   display: block;
 }
-
 .navbar .ul li ul li .two {
+  height:300px;
   position: absolute;
   display: none;
   padding: 0;
-  margin-left: 100px;
+  margin-left: 120px;
   background: #0b53699d;
   margin-top: -30px;
 }
@@ -356,12 +402,12 @@ nav .navbar {
     padding: 20px;
     margin: 15px;
   }
-nav .navbar{
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
+  nav .navbar {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
   .navbar .ul {
     width: 100%;
     height: 100%;
@@ -372,7 +418,7 @@ nav .navbar{
   }
   .navbar .ul li {
     width: 100%;
-    
+
     list-style: none;
     align-items: center;
   }

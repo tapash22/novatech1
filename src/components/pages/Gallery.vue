@@ -6,8 +6,7 @@
         <div class="col-md-4" v-for="gallery in gallerys" :key="gallery.id">
           <div class="card">
             <div class="image">
-              <img :src="'/sub/'+gallery.gimage" />
-              <!-- <a :href="'/sub/'+gallery.gimage">download</a> -->
+              <img :src="'/sub/storage/app/' + gallery.gimage" />
             </div>
           </div>
         </div>
@@ -27,16 +26,16 @@ export default {
       gallerys: [],
     };
   },
-    created() {
+  created() {
     this.getGallery();
   },
 
-    mounted() {
+  mounted() {
     window.scrollTo(0, 0);
   },
 
-  methods:{
-        getGallery() {
+  methods: {
+    getGallery() {
       Gallery.getGallery().then((response) => {
         this.gallerys = response.data;
         console.log(this.gallerys);
@@ -46,7 +45,7 @@ export default {
     uploadImage() {
       this.gimage = this.$refs.gimage.files[0];
     },
-  }
+  },
 };
 </script>
 
@@ -98,49 +97,48 @@ h3 {
 
 @media only screen and (max-width: 436px) {
   .gallery {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin-top: 130px;
-}
-.row {
-  widows: 100%;
-  padding: 10px;
-  margin: 0;
-  display: flex;
-}
-h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #000;
-  text-align: center;
-  text-transform: uppercase;
-}
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin-top: 130px;
+  }
+  .row {
+    widows: 100%;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-.row .col-md-4 {
-  width: 100%;
-  padding: 10px;
-  margin: 0;
+  .row .col-md-4 {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+  }
+  .col-md-4 .card {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin: 0;
+  }
+  .card .image {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .image img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+  }
 }
-.col-md-4 .card {
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  margin: 0;
-}
-.card .image {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-.image img {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  background-size: cover;
-}
-}
-
 </style>

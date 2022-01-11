@@ -43,7 +43,7 @@
               <td>
                 <img
                   :src="
-                    '/sub/' + slider.simage
+                    '/sub/storage/app/' + slider.simage
                   "
                 />
                 <!-- <img src="https://novatechbdltd.com/subdomainfile/storage/app/upload/o9b2W7lAQEnnIMLauhF9G8Af7Z11vQXW3XbmlDUv.png"> -->

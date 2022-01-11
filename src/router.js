@@ -17,6 +17,10 @@ import Antibiotic from "./sub_page/Antibiotic.vue";
 import Harbal from "./sub_page/Harbal.vue";
 import Nutritional from "./sub_page/Nutritional.vue";
 import Others from "./sub_page/Others.vue";
+import Anticoccidial from "./sub_page/Anticoccidial.vue";
+import Antibiotics from "./sub_page/Antibiotics.vue";
+import Probiotics from "./sub_page/Probiotics.vue";
+import Penathaone from "./sub_page/Penathaone.vue";
 
 import Dashboard from "./components/pages/Dashboard.vue";
 import Slider from "./components/pages/Slider.vue";
@@ -49,6 +53,10 @@ const routes = [
       { path: "harbal", component: Harbal },
       { path: "nutritional", component: Nutritional },
       { path: "others", component: Others },
+      { path: "anticoccidial", component: Anticoccidial },
+      { path: "antibiotics", component: Antibiotics },
+      { path: "probiotics", component: Probiotics },
+      { path: "penathaone", component: Penathaone },
     ],
   },
 

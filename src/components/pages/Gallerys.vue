@@ -41,11 +41,7 @@
               <th scope="row">{{ gallery.id }}</th>
               <td>{{ gallery.gname }}</td>
               <td>
-                <img
-                  :src="
-                    '/sub/' + gallery.gimage
-                  "
-                />
+                <img :src="'/sub/storage/app/' + gallery.gimage" />
               </td>
               <td>
                 <button

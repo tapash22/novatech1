@@ -2,7 +2,7 @@
   <div class="product">
     <div class="container">
       <div class="row">
-        <h3>Nutritional</h3>
+        <h3>Penathaone</h3>
         <div class="col-md-3" v-for="product in products" :key="product.id">
           <div class="card">
             <div class="card-body">
@@ -26,7 +26,7 @@
 import Product from "../apis/Product";
 
 export default {
-  name: "nutritional",
+  name: "antibiotic",
   data() {
     return {
       products: [],
@@ -34,7 +34,7 @@ export default {
   },
 
   created() {
-    Product.getNutritional().then((res) => {
+    Product.getAntibiotic().then((res) => {
       this.products = res.data;
       console.log(this.products);
     });

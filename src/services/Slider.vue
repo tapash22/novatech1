@@ -1,7 +1,7 @@
 <template>
-<carousel :autoplay="4000" :nav="true" :wrap-around="true">
+  <carousel :autoplay="4000" :nav="true" :wrap-around="true">
     <slide v-for="slider in sliders" :key="slider.id">
-      <img :src="'/sub/'+slider.simage" />
+      <img :src="'/sub/storage/app/' + slider.simage" />
     </slide>
 
     <template #addons>
@@ -24,7 +24,7 @@ export default {
     };
   },
   components: {
-         Carousel,
+    Carousel,
     Slide,
 
     Pagination,
@@ -66,16 +66,14 @@ img {
   opacity: 0;
 }
 
-
 @media only screen and (max-width: 436px) {
   img {
-  width: 100%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  padding: 0;
-  margin: 0;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+  }
 }
-}
-
 </style>

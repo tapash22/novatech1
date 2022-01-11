@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <h3>Others</h3>
-        <div class="col-md-3" v-for="product in products" :key="product.id">
+        <!-- <div class="col-md-3" v-for="product in products" :key="product.id">
           <div class="card">
             <div class="card-body">
               <img :src="product.img" />
@@ -15,7 +15,7 @@
               >
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

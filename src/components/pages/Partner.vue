@@ -29,7 +29,7 @@
         </form>
       </div>
     </div>
-    
+
     <div class="row my-3">
       <div class="col-md-12">
         <table class="table table-hover">
@@ -48,11 +48,7 @@
               <td>{{ partner.pname }}</td>
               <td>{{ partner.plink }}</td>
               <td>
-                <img
-                  :src="
-                    '/sub/' + partner.pimage
-                  "
-                />
+                <img :src="'/sub/storage/app/' + partner.pimage" />
               </td>
               <td>
                 <button
@@ -73,8 +69,6 @@
         </table>
       </div>
     </div>
-
-    
   </div>
 </template>
 
@@ -136,7 +130,6 @@ export default {
 
     deletePartner(id) {
       if (window.confirm("Are you want to delete this?")) {
-
         Partner.deletePartner(id)
           .then((res) => {
             if (res.data.error) {
@@ -199,5 +192,4 @@ tbody td img {
   width: 150px;
   height: 100px;
 }
-
 </style>

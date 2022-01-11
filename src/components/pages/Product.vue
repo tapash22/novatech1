@@ -88,7 +88,7 @@
               <td>
                 <img
                   :src="
-                    '/sub/' + product.pcomimage
+                    '/sub/storage/app/' + product.pcomimage
                   "
                 />
               </td>

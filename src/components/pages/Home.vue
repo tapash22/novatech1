@@ -35,7 +35,7 @@
           <div class="col-md-2" v-for="partner in partners" :key="partner.id">
             <div class="card">
               <div class="card-body">
-                <img :src="'/sub/' + partner.pimage" />
+                <img :src="'/sub/storage/app/' + partner.pimage" />
               </div>
               <div class="card-footer">
                 <p class="name">{{ partner.pname }}</p>
