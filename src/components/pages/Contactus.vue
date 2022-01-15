@@ -8,14 +8,14 @@
         <div class="col-md-6">
           <h3>Office Location</h3>
           <address>
-            House No:25,&nbsp;Road No:04,<br />
-            Sector No:10, Uttara, Dhaka-1230.
+            Chandona, Chowrasta<br/>
+            Joydebpur, Gazipur-1702.
           </address>
         </div>
         <div class="col-md-6">
           <h3>Online Tracing</h3>
           <ul>
-            <li><p class="wrap">Mobile : </p><p> +8801776235423</p></li>
+            <li><p class="wrap">Mobile : </p><p> +8801724605211</p></li>
             <li><p class="wrap">Email : </p><p> info@novatechbdltd.com</p></li>
             <li><p class="wrap">Facebook : </p><p> novatech@gmail.com</p></li>
             <li><p class="wrap">linkedin : </p><p> novatech@linkedin.com</p></li>
@@ -79,7 +79,7 @@ h3 {
 .col-md-6 address {
   font-size: 1.2rem;
   font-weight: 800;
-  font-family: "Roboto", sans-serif;
+  font-family: "Luxurious Roman", cursive;
   text-align: center;
   color: #000;
   border-right: 5px solid #7dced1;
@@ -109,7 +109,7 @@ ul li .wrap{
 ul li p{
   font-size: 1.2rem;
   font-weight: 800;
-  font-family: "Roboto", sans-serif;
+   font-family: "Luxurious Roman", cursive;
   width: 150px;
   padding: 0;
   margin: 0;

@@ -23,35 +23,9 @@
                  
 <script>
 export default {
-  name: "antibiotic",
+  name: "others",
   data() {
     return {
-      products: [
-        {
-          id: "1",
-          name: "Jinan",
-          img: require("../assets/image/oth.png"),
-          url: "",
-        },
-        {
-          id: "2",
-          name: "Jinwoo",
-          img: require("../assets/image/oth.png"),
-          url: "",
-        },
-        {
-          id: "3",
-          name: "Jizhong",
-          img: require("../assets/image/oth.png"),
-          url: "",
-        },
-        {
-          id: "4",
-          name: "junyu",
-          img: require("../assets/image/oth.png"),
-          url: "",
-        },
-      ],
     };
   },
 

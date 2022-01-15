@@ -127,19 +127,19 @@ export default {
         {
           id: "1",
           name: "Poultry",
-          img: require("../../assets/image/chi.jpg"),
+          img: require("../../assets/image/chi.png"),
           url: "/poultry",
         },
         {
           id: "2",
           name: "Dairy",
-          img: require("../../assets/image/co.jpg"),
+          img: require("../../assets/image/co.png"),
           url: "/dairy",
         },
         {
           id: "3",
           name: "Aqua",
-          img: require("../../assets/image/fi.jpg"),
+          img: require("../../assets/image/fi.png"),
           url: "/aqua",
         },
       ],

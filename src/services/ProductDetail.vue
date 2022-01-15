@@ -53,6 +53,13 @@ import Product from "../apis/Product";
 export default {
   data() {
     return {
+      pdname: "",
+      pcname: "",
+      pscname: "",
+      pintro: "",
+      pdescription: "",
+      pcomimage: "",
+      pimage: "",
       id: this.$route.params.id,
       products: [],
     };
@@ -98,8 +105,7 @@ export default {
   display: flex;
 }
 .box .image {
-  width: 100%;
-  
+  width: 40%;
   padding: 10px;
   margin: 0;
 }
@@ -150,7 +156,7 @@ export default {
 .image1 .des p {
   font-size: 1.2rem;
   font-weight: 900;
-  font-family: "Roboto", sans-serif;
+   font-family: "Luxurious Roman", cursive;
   padding: 5px;
   margin: 5px;
 }

@@ -6,9 +6,7 @@
         <div class="col-md-3" v-for="product in products" :key="product.id">
           <div class="card">
             <div class="card-body">
-              <img :src="
-                    '/sub/storage/app/' + product.img
-                  " />
+              <img :src="product.img" />
             </div>
             <div class="card-footer">
               <p>{{ product.name }}</p>

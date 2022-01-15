@@ -39,6 +39,16 @@
                       <router-link to="/harbal">Harbal </router-link>
                     </li>
                     <li>
+                      <router-link to="/probiotics"
+                        >Probiotics & Prebiotics
+                      </router-link>
+                    </li>
+                    <li>
+                      <router-link to="/anticoccidial"
+                        >Anticoccidial
+                      </router-link>
+                    </li>
+                    <li>
                       <router-link to="/others">Others</router-link>
                     </li>
                   </ul>
@@ -47,6 +57,14 @@
                   <router-link to="/dairy"
                     >Dairy<i class="fa fa-angle-right" aria-hidden="true"></i
                   ></router-link>
+                  <ul class="two">
+                    <li>
+                      <router-link to="/antibiotics">Antibiotics</router-link>
+                    </li>
+                    <li>
+                      <router-link to="/penathaone">Penathaone</router-link>
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <router-link to="/aqua"
@@ -309,11 +327,11 @@ nav .navbar {
   display: flex;
   justify-content: space-between;
   border-bottom: none;
+  color: #fff;
 }
 .navbar .ul li ul li a:hover,
 .navbar .ul li ul li a.router-link-exact-active {
   border-bottom: none;
-  color: #fff;
 }
 .navbar .ul li ul li a i {
   padding-top: 5px;
@@ -329,7 +347,6 @@ nav .navbar {
   display: block;
 }
 .navbar .ul li ul li .two {
-  height:300px;
   position: absolute;
   display: none;
   padding: 0;
@@ -430,7 +447,7 @@ nav .navbar {
   .navbar .ul li a {
     font-size: 1.2rem;
     font-weight: 900;
-    font-family: "Oswald", sans-serif;
+    font-family: "Luxurious Roman", cursive;
     letter-spacing: 1px;
     text-decoration: none;
     color: #000;
@@ -463,11 +480,11 @@ nav .navbar {
     display: flex;
     justify-content: space-between;
     border-bottom: none;
+    color: #fff;
   }
   .navbar .ul li ul li a:hover,
   .navbar .ul li ul li a.router-link-exact-active {
     border-bottom: none;
-    color: #fff;
   }
   .navbar .ul li ul li a i {
     padding-top: 5px;

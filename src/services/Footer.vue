@@ -5,10 +5,9 @@
         <div class="col-md-3">
           <h3>We Are</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo odit
-            fugit dolore hic consequuntur, nulla ratione deleniti corporis
-            obcaecati commodi ipsum sunt, neque fugiat eaque. Exercitationem
-            provident animi corporis ea!
+            Novatech Bangladesh Ltd is a top leadin importer company in Banladesh, established in 2012.
+            We do import different kinds of products from different country like India, China, South-korea,
+            Poland and Spain.
           </p>
         </div>
         <div class="col-md-3">
@@ -45,8 +44,8 @@
         <div class="col-md-3">
           <h3>Get In Touch</h3>
           <address>
-            House No:25,&nbsp;Road No:04,<br />
-            Sector No:10, Uttara,<br/> Dhaka-1230.
+            Chandona, Chowrasta<br/>
+            Joydebpur, Gazipur-1702.
           </address>
         </div>
       </div>
@@ -61,7 +60,7 @@
 
 <style scoped>
 .footer {
-  background: #7dced1;
+  background: #42acaf;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -78,7 +77,7 @@
 h3 {
   font-size: 1.5rem;
   font-weight: 900;
-  font-family: "Oswald", sans-serif;
+  font-family: "Luxurious Roman", cursive;
   letter-spacing: 1px;
   color: #000;
   text-align: center;
@@ -87,7 +86,7 @@ h3 {
 p {
   font-size: 1.3rem;
   font-weight: 900;
-  font-family: "Roboto", sans-serif;
+  font-family: "Luxurious Roman", cursive;
   color: #000;
   padding: 5px;
   text-align: justify;
@@ -107,7 +106,7 @@ ul li {
 ul li a {
   font-size: 1.3rem;
   font-weight: 900;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Luxurious Roman", cursive;
   color: #000;
   padding: 5px;
 }
@@ -124,7 +123,7 @@ address {
   text-align: justify;
 font-size: 1.3rem;
   font-weight: 900;
-  font-family: "Roboto", sans-serif;
+  font-family: "Luxurious Roman", cursive;
   color: #000;
 }
 .row2{
@@ -170,7 +169,7 @@ font-size: 1.3rem;
 h3 {
   font-size: 1.5rem;
   font-weight: 900;
-  font-family: "Oswald", sans-serif;
+  font-family: "Luxurious Roman", cursive;
   letter-spacing: 1px;
   color: #000;
   text-align: center;
@@ -179,7 +178,7 @@ h3 {
 p {
   font-size: 1.3rem;
   font-weight: 900;
-  font-family: "Roboto", sans-serif;
+  font-family: "Luxurious Roman", cursive;
   color: #000;
   padding: 5px;
   text-align: justify;
@@ -199,7 +198,7 @@ ul li {
 ul li a {
   font-size: 1.3rem;
   font-weight: 900;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Luxurious Roman", cursive;
   color: #000;
   padding: 5px;
 }
@@ -216,7 +215,7 @@ address {
   text-align: center;
 font-size: 1.3rem;
   font-weight: 900;
-  font-family: "Roboto", sans-serif;
+  font-family: "Luxurious Roman", cursive;
   color: #000;
 }
 .row2{

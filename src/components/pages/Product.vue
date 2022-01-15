@@ -24,6 +24,9 @@
               <option>antibiotic</option>
               <option>nutritional</option>
               <option>harbal</option>
+              <option>probiotics</option>
+              <option>anticoccidial</option>
+              <option>penathaone</option>
               <option>others</option>
             </select>
           </div>
@@ -95,7 +98,7 @@
               <td>
                 <img
                   :src="
-                    '/sub/' + product.pimage
+                    '/sub/storage/app/' + product.pimage
                   "
                 />
               </td>
